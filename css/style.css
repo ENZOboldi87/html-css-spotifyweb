@@ -12,11 +12,13 @@
 .sidebar {
   width: 230px;
   background: black;
-  height: 100vh;
+  height: calc(100vh - 90px);
+  padding: 30px
 }
-
+.sidebar > .menu_top > ul > li > a > img {
+  height: 20px;
+}
 .sidebar .logo {
-  padding: 20px;
   height: 100px;
 }
 
@@ -28,12 +30,14 @@
   float: left;
   width: calc(100% - 230px);
   height: calc(100vh - 90px);
-  background-color: green;
+  background: hsl(218.6, 25.9%, 10.6%);
   color: white;
+  overflow: auto;
+
 }
 
 .button_flex {
-  display: flex;
+  padding: 30px;
 }
 
 .content {
@@ -45,7 +49,9 @@
   background-color: #000000ab;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: calc(100% - 230px);
+  display: flex;
+  justify-content: flex-end;
 
 }
 footer .nav_player {
