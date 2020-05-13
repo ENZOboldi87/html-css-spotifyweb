@@ -1,65 +1,254 @@
+/* general rules */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.wrapper {
-  height: calc(100vh - 90px);
-  width: 100%;
-}
-
-.sidebar {
-  width: 230px;
-  background: black;
-  height: calc(100vh - 90px);
-  padding: 30px
-}
-.sidebar > .menu_top > ul > li > a > img {
-  height: 20px;
-}
-.sidebar .logo {
-  height: 100px;
-}
-
-.contenuto {
-  background-color: blue;
+body a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .container_main {
   float: left;
-  width: calc(100% - 230px);
+  width: calc(100% - 300px);
   height: calc(100vh - 90px);
   background: hsl(218.6, 25.9%, 10.6%);
   color: white;
   overflow: auto;
+}
 
+.wrapper {
+  height: calc(100vh - 90px);
+  width: 100%;
+}
+/* ends general rules */
+
+/* sidebar header */
+.wrapper>header {
+  width: 300px;
+  background: black;
+  height: 100%;
+  padding: 30px;
+  color: #6d6d6d;
+}
+
+.sidebar .logo {
+  height: 80px;
+}
+
+.menu_top .list-unstyled {
+  padding: 10px 0;
+}
+
+.menu_top > ul > li {
+  padding: 5px 0;
+}
+
+.menu_top > ul > li > a > img {
+  height: 25px;
+  margin: 0px 10px;
+}
+
+.sidebar .playlist {
+  height: calc(100vh - 440px);
+  overflow: hidden;
+}
+
+.playlist > ul {
+  height: calc(100vh - 470px);
+  overflow-y: auto;
+}
+
+.playlist ul > li {
+  padding: 5px 0;
+}
+
+.playlist >a>i {
+  width: 30px;
+  margin-right: 10px;
+  background-color: #b3b3b3;
+  vertical-align: middle;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  padding: 5px;
+}
+
+.bottom_user .button_install {
+  border-bottom: 1px solid #6d6d6d;
+  padding: 10px 0;
+}
+
+.bottom_user .button_install > a > img {
+  height: 25px;
+}
+
+.button_profile {
+  padding: 10px 0;
+}
+
+.button_profile > a > img {
+  height: 30px;
+  background: gray;
+  border-radius: 50%;
+  width: 30px;
+}
+/* ends sidebar */
+
+
+/* header transparent top */
+.trasparent_top {
+  height: 100px;
+  background-color: #000000ab;
+  position: fixed;
+  top: 0;
+  width: calc(100% - 300px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .button_flex {
-  padding: 30px;
+  padding: 12px 15px;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  height: 50px;
+  margin-right: 50px;
 }
 
 .content {
   margin-top: 100px;
 }
+/* ends header transparent top */
 
-.container_main .trasparente_top {
-  height: 100px;
-  background-color: #000000ab;
-  position: fixed;
-  top: 0;
-  width: calc(100% - 230px);
-  display: flex;
-  justify-content: flex-end;
+/* footer nav player */
 
-}
+    /* footer general rules */
 footer .nav_player {
   height: 90px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
+
 footer {
-  background: rgb(40, 40, 40);
+  background: #282828;
   position: relative;
   z-index: 2;
+  color: #878787;
+}
+
+.block {
+  width: calc(100% / 3);
+  height: 100%;
+}
+    /* ends footer general rules */
+
+  /* left player footer  */
+.left .actual_playing {
+  display: flex;
+  align-items: center;
+}
+
+.left .actual_playing img {
+  height: 80px;
+  padding: 9px;
+}
+
+.left .links {
+  margin-left: 80px;
+}
+  /* ends left player footer  */
+
+  /* center player footer  */
+.center .barra_down {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  height: 40%;
+}
+
+.center .bar_song {
+  position: relative;
+  width: 80%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: rgb(56, 56, 56);
+}
+
+.center .bar_song::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 4px;
+  border-radius: 2px;
+  content: '';
+  background-color: rgb(170, 170, 170);
+}
+
+ .playing_seconds {
+  margin-right: 20px;
+  font-size: 12px;
+  color: #ffffff;
+ }
+
+ .playing_remaining {
+  margin-left: 20px;
+  font-size: 12px;
+  color: #ffffff;
+ }
+
+.player_keys a i {
+  font-size: 15px;
+  padding: 10px;
+}
+  /* ends center player footer */
+
+  /* right player footer  */
+.right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.bar_dx_song {
+  position: relative;
+  width: 30%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: rgb(56, 56, 56);
+}
+
+.bar_dx_song::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 4px;
+  border-radius: 2px;
+  content: '';
+  background-color: rgb(170, 170, 170);
+}
+
+.player_keys i.fa-play-circle {
+  font-size: 30px;
+  margin: 10px;
+  padding: 0;
 
 }
+
+.right a {
+  padding: 10px;
+}
+
+.right a i {
+  padding: 5px;
+  color: white;
+}
+  /* ends right player footer  */
+/* ends footer */
