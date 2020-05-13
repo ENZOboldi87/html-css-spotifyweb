@@ -8,6 +8,7 @@
 body a {
   text-decoration: none;
   color: inherit;
+
 }
 
 .container_main {
@@ -15,7 +16,7 @@ body a {
   width: calc(100% - 300px);
   height: calc(100vh - 90px);
   background: hsl(218.6, 25.9%, 10.6%);
-  color: white;
+  color: #6d6d6d;
   overflow: auto;
 }
 
@@ -97,6 +98,33 @@ body a {
 }
 /* ends sidebar */
 
+/* main content */
+
+.content_vinyl {
+  padding: 20px;
+}
+
+.menu .list-inline {
+  padding: 20px;
+}
+
+.container_dischi {
+  display: flex;
+}
+
+a.vinyl {
+  margin: 10px;
+  width: 200px;
+}
+
+.container_dischi a img {
+  width: 100%;
+}
+
+.container_dischi a h5 {
+  margin-top: 10px;
+  font-weight: bold;
+}
 
 /* header transparent top */
 .trasparent_top {
@@ -111,7 +139,7 @@ body a {
 }
 
 .button_flex {
-  padding: 12px 15px;
+  padding: 12px 40px;
   border: 1px solid #ffffff;
   border-radius: 20px;
   height: 50px;
