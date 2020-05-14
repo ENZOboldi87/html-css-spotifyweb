@@ -8,7 +8,6 @@
 body a {
   text-decoration: none;
   color: inherit;
-
 }
 
 .container_main {
@@ -99,7 +98,6 @@ body a {
 /* ends sidebar */
 
 /* main content */
-
 .content_vinyl {
   padding: 20px;
 }
@@ -150,6 +148,7 @@ a.vinyl {
   margin-top: 100px;
 }
 /* ends header transparent top */
+/* ends main content */
 
 /* footer nav player */
 
