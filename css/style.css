@@ -10,6 +10,11 @@ body a {
   color: inherit;
 }
 
+body a:hover {
+  text-decoration: none;
+  color: #ffff;
+}
+
 .container_main {
   float: left;
   width: calc(100% - 300px);
@@ -26,7 +31,7 @@ body a {
 /* ends general rules */
 
 /* sidebar header */
-.wrapper>header {
+.wrapper .sidebar {
   width: 300px;
   background: black;
   height: 100%;
@@ -98,32 +103,6 @@ body a {
 /* ends sidebar */
 
 /* main content */
-.content_vinyl {
-  padding: 20px;
-}
-
-.menu .list-inline {
-  padding: 20px;
-}
-
-.container_dischi {
-  display: flex;
-}
-
-a.vinyl {
-  margin: 10px;
-  width: 200px;
-}
-
-.container_dischi a img {
-  width: 100%;
-}
-
-.container_dischi a h5 {
-  margin-top: 10px;
-  font-weight: bold;
-}
-
 /* header transparent top */
 .trasparent_top {
   height: 100px;
@@ -142,17 +121,79 @@ a.vinyl {
   border-radius: 20px;
   height: 50px;
   margin-right: 50px;
+  transition: transform .1s;
+}
+
+.button_flex:hover {
+  transform: scale(1.2);
 }
 
 .content {
   margin-top: 100px;
 }
-/* ends header transparent top */
+  /* ends header transparent top */
+.menu .list-inline {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* content vinyl */
+.content_vinyl {
+  padding: 20px;
+}
+
+.container_album {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container_album .vinyl {
+  margin: 5px;
+  width: 200px;
+}
+
+.container_album .vinyl .image_album img {
+  width: 100%;
+}
+
+.container_album .vinyl a h5 {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.image_album {
+  position: relative;
+}
+
+.vinyl .image_album .layover_effect {
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0, 0.4);
+}
+
+.vinyl .image_album .layover_effect i {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: #ffff;
+  border-radius: 10px;
+}
+
+.vinyl .image_album:hover .layover_effect {
+  display: block;
+}
 /* ends main content */
 
 /* footer nav player */
-
-    /* footer general rules */
+/* footer general rules */
 footer .nav_player {
   height: 90px;
   display: flex;
@@ -172,7 +213,7 @@ footer {
   width: calc(100% / 3);
   height: 100%;
 }
-    /* ends footer general rules */
+/* ends footer general rules */
 
   /* left player footer  */
 .left .actual_playing {
@@ -206,24 +247,13 @@ footer {
   background-color: rgb(56, 56, 56);
 }
 
-.center .bar_song::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 20%;
-  height: 4px;
-  border-radius: 2px;
-  content: '';
-  background-color: rgb(170, 170, 170);
-}
-
- .playing_seconds {
+.playing_seconds {
   margin-right: 20px;
   font-size: 12px;
   color: #ffffff;
  }
 
- .playing_remaining {
+.playing_remaining {
   margin-left: 20px;
   font-size: 12px;
   color: #ffffff;
@@ -232,6 +262,34 @@ footer {
 .player_keys a i {
   font-size: 15px;
   padding: 10px;
+}
+
+.pointer_ball {
+  height: 4px;
+  background-color: #aaa;
+  width: 20%;
+  border-radius: 10px;
+}
+
+.pointer_ball:hover {
+  background-color: lightgreen;
+  cursor: pointer;
+}
+
+.pointer_ball:hover::after {
+  display: block;
+}
+
+.pointer_ball::after {
+  content: "";
+  position: absolute;
+  right: 80%;
+  top: -3px;
+  height: 10px;
+  width: 10px;
+  background-color: white;
+  border-radius: 50%;
+  display: none;
 }
   /* ends center player footer */
 
@@ -251,17 +309,6 @@ footer {
   background-color: rgb(56, 56, 56);
 }
 
-.bar_dx_song::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 60%;
-  height: 4px;
-  border-radius: 2px;
-  content: '';
-  background-color: rgb(170, 170, 170);
-}
-
 .player_keys i.fa-play-circle {
   font-size: 30px;
   margin: 10px;
@@ -279,3 +326,56 @@ footer {
 }
   /* ends right player footer  */
 /* ends footer */
+
+/* media queries */
+@media (min-width: 576px) and (max-width: 767.98px){
+  .sidebar .logo {
+    height: 40px;
+  }
+
+  .small_logo {
+    height: 50px;
+    padding: 5px;
+  }
+
+  .menu_top > ul > li > a > img {
+    height: 30px;
+  }
+
+  .container_main {
+    width: calc(100% - 50px);
+  }
+
+  .wrapper .sidebar {
+    width: 50px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bottom_user .button_install {
+    border-bottom: none;
+  }
+
+  .menu_top {
+    flex-basis: 100%;
+  }
+
+  .button_flex {
+    padding: 10px 12px;
+    border-radius: 20px;
+    height: 40px;
+    margin-right: 30px;
+    font-size: 10px;
+  }
+
+  .trasparent_top {
+    width: calc(100% - 60px);
+    height: 80px;
+  }
+
+  .sidebar .playlist {
+    height: calc(100vh - 550px);
+  }
+
+}

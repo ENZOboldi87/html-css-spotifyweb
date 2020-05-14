@@ -11,20 +11,22 @@
   <body>
     <div class="wrapper clearfix">
       <!-- header left sidebar -->
-      <header class="float-left">
-        <section class="sidebar">
+      <header class="sidebar float-left">
           <div class="logo">
-            <img src="img/logo.svg" alt="logo">
+            <img class="d-sm-none d-md-block big_logo" src="img/logo.svg" alt="logo">
+            <img class="d-block d-md-none small_logo" src="img/logo-small.svg" alt="small-logo">
           </div>
-          <div class="content_sidebar">
             <div class="menu_top">
               <ul class="list-unstyled">
-                <li><a class="text-white" href="#"><img src="img/home.svg" alt="">Home</a></li>
-                <li><a href="#"><img src="img/search.svg" alt="">Cerca</a></li>
-                <li><a href="#"><img src="img/libreria.svg" alt="">La tua libreria</a></li>
+                <li class="d-sm-none d-md-block"><a class="text-white" href="#"><img src="img/home.svg" alt="">Home</a></li>
+                <li class="d-sm-none d-md-block"><a href="#"><img src="img/search.svg" alt="">Cerca</a></li>
+                <li class="d-sm-none d-md-block"><a href="#"><img src="img/libreria.svg" alt="">La tua libreria</a></li>
+                <li class="d-block d-md-none"><a class="text-white" href="#"><img src="img/home.svg" alt=""></a></li>
+                <li class="d-block d-md-none"><a href="#"><img src="img/search.svg" alt=""></a></li>
+                <li class="d-block d-md-none"><a href="#"><img src="img/libreria.svg" alt=""></a></li>
               </ul>
             </div>
-            <div class="playlist">
+            <div class="d-xs-none d-sm-none d-md-block playlist">
               <p class="text-uppercase text-white">playlist</p>
               <a href="#"> <i class="fas fa-plus"></i> Crea Playlist</a>
               <ul class="list-unstyled">
@@ -39,14 +41,14 @@
             </div>
             <div class="bottom_user">
               <div class="button_install">
-                <a href="#"> <img src="img/download.svg" alt=""> Installa app </a>
+                <a class="d-sm-none d-md-block" href="#"> <img src="img/download.svg" alt=""> Installa app </a>
+                <a class="d-block d-md-none text-center" href="#"> <img src="img/download.svg" alt=""></a>
               </div>
               <div class="button_profile">
-                <a class="text-white" href="#"> <img src="img/profile.svg" alt=""> John Doe</a>
+                <a class="text-white d-sm-none d-md-block" href="#"> <img src="img/profile.svg" alt=""> John Doe</a>
+                <a class="d-block d-md-none text-center" href="#"> <img src="img/profile.svg" alt=""></a>
               </div>
             </div>
-          </div>
-        </section>
       </header>
       <!-- ends header left sidebar -->
       <!-- main -->
@@ -72,63 +74,113 @@
           <!-- content vinyl -->
           <div class="content_vinyl">
             <h2 class="text-white"> Recently played </h2>
-            <div class="container_dischi">
-              <a class="vinyl" href="#">
-                <img src="img/metal_lifting.jpg" alt="">
-                <h5 class="text-center text-white">Heavy Metal</h5>
-                <p class="text-center h6">subtitle</p>
-              </a>
-              <a class="vinyl" href="#">
-                <img src="img/stranger.jpeg" alt="">
-                <h5 class="text-center text-white">Stranger Things, Vol. 1(a Netflix Original Series Soundtrack)</h5>
+            <div class="container_album">
+              <div class="vinyl">
+                <div class="image_album">
+                  <div class="layover_effect">
+                    <i class="far fa-play-circle"></i>
+                  </div>
+                  <img src="img/metal_lifting.jpg" alt="">
+                </div>
+                <a href="#"> <h5 class="text-center text-white">Heavy Metal</h5></a>
+                <p class="text-center h6">Subtitle</p>
+              </div>
+              <div class="vinyl">
+                <div class="image_album">
+                  <div class="layover_effect">
+                  <i class="far fa-play-circle"></i>
+                  </div>
+                  <img src="img/stranger.jpeg" alt="">
+                </div>
+                <a href="#"> <h5 class="text-center text-white">Stranger Things, Vol. 1(a Netflix Original Series Soundtrack)</h5></a>
                 <p class="text-center h6">Kyle Dixon & Michael Stein</p>
-              </a>
-              <a class="vinyl" href="#">
-                <img src="img/aquietplace.jpeg" alt="">
-                <h5 class="text-center text-white">A quiet place</h5>
+              </div>
+              <div class="vinyl">
+                <div class="image_album">
+                  <div class="layover_effect">
+                  <i class="far fa-play-circle"></i>
+                  </div>
+                  <img src="img/aquietplace.jpeg" alt="">
+                </div>
+                <a href="#"><h5 class="text-center text-white">A quiet place</h5></a>
                 <p class="text-center h6">subtitle</p>
-              </a>
-              <a class="vinyl" href="#">
-                <img src="img/split.jpeg" alt="">
-                <h5 class="text-center text-white">Split</h5>
+              </div>
+              <div class="vinyl">
+                <div class="image_album">
+                  <div class="layover_effect">
+                  <i class="far fa-play-circle"></i>
+                  </div>
+                  <img src="img/split.jpeg" alt="">
+                </div>
+                <a href="#"> <h5 class="text-center text-white">Split</h5></a>
                 <p class="text-center h6">subtitle</p>
-              </a>
-              <a class="vinyl" href="#">
-                <img src="img/cure.jpeg" alt="">
-                <h5 class="text-center text-white">A cure for wellness</h5>
+              </div>
+              <div class="vinyl">
+                <div class="image_album">
+                  <div class="layover_effect">
+                  <i class="far fa-play-circle"></i>
+                  </div>
+                  <img src="img/cure.jpeg" alt="">
+                </div>
+                <a href="#"> <h5 class="text-center text-white">A cure for wellness</h5></a>
                 <p class="text-center h6">subtitle</p>
-              </a>
-              <a class="vinyl" href="#">
-                <img src="img/sinister.jpeg" alt="">
-                <h5 class="text-center text-white">Sinister</h5>
+              </div>
+              <div class="vinyl">
+                <div class="image_album">
+                  <div class="layover_effect">
+                  <i class="far fa-play-circle"></i>
+                  </div>
+                  <img src="img/sinister.jpeg" alt="">
+                </div>
+                <a href="#"> <h5 class="text-center text-white">Sinister</h5></a>
                 <p class="text-center h6">subtitle</p>
-              </a>
+              </div>
             </div>
             <h2 class="text-white"> Creato per John Doe </h2>
             <p class="h6"> Piu ascolti, piu accurati saranno i suggerimenti</p>
-            <div class="container_dischi">
-              <a class="vinyl" href="#">
-                <img src="img/radar.jpeg" alt="">
-                <h5 class="text-center text-white">Release Radar</h5>
+            <div class="container_album">
+              <div class="vinyl">
+                <div class="image_album">
+                  <div class="layover_effect">
+                  <i class="far fa-play-circle"></i>
+                  </div>
+                  <img src="img/radar.jpeg" alt="">
+                </div>
+                <a href="#"><h5 class="text-center text-white">Release Radar</h5></a>
                 <p class="text-center h6">subtitle</p>
-              </a>
-              <a class="vinyl" href="#">
-                <img src="img/mixdaily.jpeg" alt="">
-                <h5 class="text-center text-white">Daily Mix 1</h5>
+              </div>
+              <div class="vinyl">
+                <div class="image_album">
+                  <div class="layover_effect">
+                  <i class="far fa-play-circle"></i>
+                  </div>
+                  <img src="img/mixdaily.jpeg" alt="">
+                </div>
+                <a href="#"><h5 class="text-center text-white">Daily Mix 1</h5></a>
                 <p class="text-center h6">subtitle</p>
-              </a>
+              </div>
             </div>
             <h2 class="text-white"> Artisti piu popolari </h2>
             <p class="h6"> Piu ascolti, piu accurati saranno i suggerimenti</p>
-            <div class="container_dischi">
-              <a class="vinyl" href="#">
-                <img class="rounded-circle" src="img/youg.jpeg" alt="">
-                <h5 class="text-center text-white">Lana Del Rey</h5>
-              </a>
-              <a class="vinyl" href="#">
-                <img class="rounded-circle" src="img/einaudi.jpeg" alt="">
-                <h5 class="text-center text-white">Ludovico Einaudi</h5>
-              </a>
+            <div class="container_album">
+              <div class="vinyl">
+                <div class="image_album">
+                  <div class="layover_effect">
+                  <i class="far fa-play-circle"></i>
+                  </div>
+                  <img class="rounded-circle" src="img/youg.jpeg" alt="">
+                </div>
+                <a href="#"><h5 class="text-center text-white">Lana Del Rey</h5></a>
+              </div>
+              <div class="vinyl">
+                <div class="image_album">
+                  <div class="layover_effect">
+                  <i class="far fa-play-circle"></i>
+                  </div>
+                  <img class="rounded-circle" src="img/einaudi.jpeg" alt="">
+                </div>
+                <a href="#"> <h5 class="text-center text-white">Ludovico Einaudi</h5></a>
+              </div>
             </div>
           </div>
           <!-- ends content vinyl -->
@@ -167,6 +219,7 @@
             <div class="barra_down">
               <span class="playing_seconds">0:25</span>
               <div class="bar_song">
+                <div class="pointer_ball"></div>
               </div>
               <span class="playing_remaining">4:35</span>
             </div>
@@ -178,6 +231,7 @@
             <a href="#"><i class="fas fa-desktop"></i></a>
             <a href="#"><i class="fas fa-volume-up"></i></a>
             <div class="bar_dx_song">
+              <div class="pointer_ball"></div>
             </div>
           </div>
           <!-- ends right player -->
